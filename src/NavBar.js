@@ -18,7 +18,7 @@ class NavBar extends React.Component {
                     <li className="left"><img src={logo} className="navbar-logo-img" alt="youngstar logo" /></li>
                     <li className="navbar-logo-txt">
                         <p className="big-txt">CU OPEN HOUSE</p>
-                        <p className="small-txt">Client</p>
+                        {/* <p className="small-txt">Client</p> */}
                     </li>
                 </a>
                 <div></div>
