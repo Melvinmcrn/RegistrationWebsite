@@ -24,7 +24,7 @@
 .navbar-logo-img {
     width: 50px;
     height: 50px;
-    margin-top: 5px;
+    /* margin-top: 5px; */
     margin-left: 10px;
 }
 .navbar-logo-txt {
@@ -42,8 +42,8 @@
     padding: 0px;
     margin: 0px;
     /* height: 50px; */
-    padding-top: 10px;
-    vertical-align: middle;
+    padding-top: 8px;
+    /* vertical-align: middle; */
 }
 .small-txt {
     font-size: 15px;
@@ -51,7 +51,7 @@
     margin: 0px;
 }
 .navbar-txt {
-    color: #DE5C8E;
+    color: #999999;
     font-size: 20px;
     padding-left: 10px;
     padding-right: 10px;
@@ -59,15 +59,17 @@
     padding-bottom: 15px;
     z-index: 2;
 }
-.navbar-icon {
+/* .navbar-icon {
     padding-left: 3px;
     padding-right: 3px;
-}
+} */
 .navbar-icon-profile {
     width: 25px;
     height: 25px;
-    padding-left: 3px;
-    padding-right: 3px;
+    /* padding-left: 3px;
+    padding-right: 3px; */
+    vertical-align: middle;
+    color: #999999;
 }
 ul {
     list-style-type: none;
@@ -85,10 +87,16 @@ li a {
 }
 li a:hover{
     text-decoration: none;
-    color: #DE5C8E;
+    color: #999999;
     background-color: #3a3a3a;
 }
 a:hover li{
+    text-decoration: none;
+    color: #999999;
+    background-color: #3a3a3a;
+}
+
+a:hover .big-txt{
     text-decoration: none;
     color: #DE5C8E;
     background-color: #3a3a3a;
@@ -106,11 +114,13 @@ a:hover li{
     background-color: #202020;
     min-width: 135px;
     z-index: 2;
+    right: 0px;
+    /* width: 100%; */
     
   }
   
 .dropdown-content a {
-    color: #DE5C8E;
+    color: #999999;
     text-decoration: none;
     display: block;
     padding-top: 5px;
@@ -123,8 +133,4 @@ a:hover li{
   
 .dropdown:hover .dropdown-content {
     display: block;
-  }
-  
-.dropdown:hover .dropbtn {
-    background-color: #3e8e41;
   }
