@@ -37,6 +37,22 @@
     /* background-color: red; */
     /* vertical-align: middle; */
 }
+
+.navbar-logo .staff-logo {
+    margin-top: 10px;
+    margin-left: 5px;
+    margin-right: 10px;
+    padding-bottom: 3px;
+    padding-left: 10px;
+    width: 50px;
+    height: 25px;
+    background-color: #C3002F;
+    border-radius: 5px;
+    font-family: 'chulalongkornbold';
+    font-size: 20px;
+    color: white;
+
+}
 .big-txt {
     font-size: 25px;
     padding: 0px;
@@ -133,4 +149,8 @@ a:hover .big-txt{
   
 .dropdown:hover .dropdown-content {
     display: block;
-  }
+}
+
+.hidden {
+    display: none;
+}

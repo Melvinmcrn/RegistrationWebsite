@@ -1,21 +1,34 @@
 import React from 'react';
 import NavBar from './NavBar';
-// import Home from './Home';
+import Home from './Home';
 import Register from './Register';
+import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 
 class Main extends React.Component {
-    
-    constructor(props){
+
+    constructor(props) {
         super(props);
-        this.state={};
+        this.state = {};
     }
 
-    render(){
-        return(
+    render() {
+        return (
             <div>
                 <NavBar />
-                <Register />
-                {/* <Home /> */}
+
+                <Router>
+                    <Switch>
+
+                    <Route path="/register" component={Register}>
+                    </Route>
+
+                    <Route path="/home" component={Home}>
+                    </Route>
+                        {/* <Register /> */}
+                        {/* <Home /> */}
+
+                    </Switch>
+                </Router>
             </div>
         );
     }

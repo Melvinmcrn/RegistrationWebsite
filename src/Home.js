@@ -12,8 +12,8 @@ class Home extends React.Component {
         return (
             <div className='home-content'>
                 <div className='home-content-top'>
-                    <a href='/' className='btn-registernow'>
-                        <a href='/'>
+                    <a href='/register' className='btn-registernow'>
+                        <a href='/register'>
                             Register Now
                         </a>
                     </a>
