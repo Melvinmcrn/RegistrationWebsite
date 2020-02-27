@@ -14,15 +14,16 @@ class NavBar extends React.Component {
     }
 
     login() {
-        this.setState({loggedin: true,});
+        this.setState({ loggedin: true, });
     }
 
     logout() {
-        this.setState({loggedin: false,});
+        this.setState({ loggedin: false, });
     }
 
     render() {
         return (
+
             <div className="navbar-area">
                 <ul className="navbar-container">
                     <a className="left navbar-logo" href="/home">
@@ -59,6 +60,7 @@ class NavBar extends React.Component {
                 <li className="right"><a className="navbar-txt" href="/"><FaPlusCircle className="navbar-icon" />Create Project</a></li> */}
                 </ul>
             </div>
+
         );
     }
 }
