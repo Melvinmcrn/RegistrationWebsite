@@ -8,8 +8,8 @@ class NavBar extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            loggedin: false,
-            isstaff: false,
+            loggedin: this.props.loggedin || false,
+            isstaff: this.props.isstaff || false,
         };
     }
 
@@ -39,7 +39,7 @@ class NavBar extends React.Component {
                     <div></div>
                     <li className="right">
                         <div className="dropdown">
-                            <a href="/" className="navbar-txt">
+                            <a href="/home" className="navbar-txt">
                                 <FaUserCircle className="navbar-icon-profile" />
                                 {/* Username */}
                             </a>

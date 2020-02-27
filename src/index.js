@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import NavBar from './NavBar';
+// import NavBar from './NavBar';
 import Home from './Home';
 import Register from './Register';
 import ViewEventClient from './ViewEventClient';
@@ -18,7 +18,7 @@ class Main extends React.Component {
     render() {
         return (
             <div>
-                <NavBar />
+                {/* <NavBar /> */}
 
                 <Router>
                     <Switch>

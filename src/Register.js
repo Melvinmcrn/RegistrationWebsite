@@ -1,5 +1,6 @@
 import React from 'react';
 import './Register.css';
+import Navbar from './NavBar';
 
 class Register extends React.Component {
 
@@ -10,19 +11,23 @@ class Register extends React.Component {
 
     render() {
         return (
-            <div className='register-container'>
+            <div>
+                <Navbar />
 
-                <form className='register-form'>
+                <div className='register-container'>
 
-                {loginInfo()}
-                {personalInformation()}
-                {education()}
+                    <form className='register-form'>
 
-                <div className='submit-btn-group'>
-                    <input type='submit'></input>
+                        {loginInfo()}
+                        {personalInformation()}
+                        {education()}
+
+                        <div className='submit-btn-group'>
+                            <input type='submit'></input>
+                        </div>
+
+                    </form>
                 </div>
-
-                </form>
             </div>
         );
     }
@@ -33,27 +38,32 @@ function personalInformation() {
         <div className='form-container'>
 
             <div className='form-topic'>
-                <h1>ข้อมูลส่วนตัว</h1>
+                <h1>Personal Information</h1>
             </div>
 
-            <div className='form-content'>
-                <label>ชื่อ</label>
-                <input type='text'></input>
+            <div className='form-row'>
+                <div className='form-content'>
+                    <label>First name</label>
+                    <input type='text' placeholder='Melvin'></input>
+                </div>
+
+                <div className='form-content'>
+                    <label>Last name</label>
+                    <input type='text' placeholder='Macaranas'></input>
+                </div>
             </div>
 
-            <div className='form-content'>
-                <label>นามสกุล</label>
-                <input type='text'></input>
-            </div>
 
-            <div className='form-content'>
-                <label>ชื่อเล่น</label>
-                <input type='text'></input>
-            </div>
+            <div className='form-row'>
+                <div className='form-content'>
+                    <label>Nickname</label>
+                    <input type='text' placeholder='Mel'></input>
+                </div>
 
-            <div className='form-content'>
-                <label>วันเกิด</label>
-                <input type='date   '></input>
+                <div className='form-content'>
+                    <label>Birthday</label>
+                    <input type='date' ></input>
+                </div>
             </div>
 
         </div>
@@ -65,7 +75,7 @@ function loginInfo() {
         <div className='form-container'>
 
             <div className='form-topic'>
-                <h1>ข้อมูลบัญชี</h1>
+                <h1>Account Information</h1>
             </div>
 
             <div className='form-content'>
@@ -92,11 +102,11 @@ function education() {
         <div className='form-container'>
 
             <div className='form-topic'>
-                <h1>การศึกษา</h1>
+                <h1>Education</h1>
             </div>
 
             <div className='form-content'>
-                <label>ระดับการศึกษา</label>
+                <label>Education Level</label>
                 <input type='text'></input>
             </div>
 
