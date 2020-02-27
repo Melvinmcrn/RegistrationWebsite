@@ -1,0 +1,164 @@
+/* ------------------- fonts ----------------------- */
+@font-face {
+  font-family: "chulalongkornbold";
+  src: url("./fonts/chulalongkornbold-webfont.woff2") format("woff2"),
+    url("./fonts/chulalongkornbold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "chulalongkornreg";
+  src: url("./fonts/chulalongkornreg-webfont.woff2") format("woff2"),
+    url("./fonts/chulalongkornreg-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* --------------------- main ------------------------- */
+
+.vieweventclient-container {
+  width: 100%;
+  height: auto;
+  overflow-y: auto;
+  -ms-overflow-style: none;
+  background-image: url("./img/chula-bg.jpg");
+  background-color: red;
+  display: block;
+}
+
+.vieweventclient-container::-webkit-scrollbar {
+  display: none;
+}
+
+.event-container {
+  margin: 10px auto 10px auto;
+  width: 90%;
+  height: 150px;
+  background-color: rgba(245, 245, 245, 0.8);
+  border: 5px solid;
+  border-radius: 10px;
+  overflow-y: auto;
+  -ms-overflow-style: none;
+}
+
+.event-container::-webkit-scrollbar {
+  display: none;
+}
+
+.event-container.engineer-event {
+  border-color: #8b2332;
+  color: #8b2332;
+}
+
+.event-container.cbs-event {
+  border-color: #00a1df;
+  color: #00a1df;
+}
+
+.event-container.mdcu-event {
+  border-color: #026937;
+  color: #026937;
+}
+
+.event-container .left {
+  float: left;
+  margin-left: 10px;
+}
+
+.event-container .right {
+  float: right;
+  height: 100%;
+  /* background-color: blue; */
+  position: relative;
+}
+
+.event-container .event-name {
+  font-family: "chulalongkornbold";
+  font-size: 50px;
+  margin-top: 0px;
+  margin-left: 0px;
+}
+
+h1.event-name {
+  margin: 0px 0px 0px 0px;
+}
+
+.event-container .event-detail {
+  color: rgb(95, 95, 95);
+  font-family: "chulalongkornreg";
+  font-size: 16px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.event-detail h2 {
+  margin: 0px 0px 0px 0px;
+}
+
+.event-container h2 .icon {
+  height: 16px;
+}
+
+.event-container .right .top-status {
+    font-family: 'chulalongkornreg';
+    font-size: 20px;
+    position: absolute;
+    top: 0px;
+    right: 5px;
+    margin-top: 0px;
+}
+
+.event-container .right .bottom-btn {
+    /* background-color: red; */
+    height: 30px;
+    width: 90px;
+    border: 1px solid;
+    border-radius: 5px;
+    bottom: 5px;
+    right: 5px;
+    position: absolute;
+    text-align: center;
+    font-family: 'chulalongkornbold';
+    font-size: 16px;
+}
+
+.event-container .right .top-status.Open {
+    color: black;
+}
+
+.event-container .right .top-status.Registered {
+    color: rgb(33, 196, 0);
+}
+
+.event-container .right .top-status.Pending {
+    color: rgb(230, 207, 3);
+}
+
+.event-container .right .top-status.Rejected {
+    color: rgb(179, 0, 0);
+}
+
+.event-container .right .bottom-btn.Register{
+    border-color: rgb(33, 196, 0);
+    color: rgb(33, 196, 0);
+}
+
+.event-container .right .bottom-btn.Register:hover{
+    background-color: rgb(33, 196, 0);
+    color: white;
+}
+
+.event-container .right .bottom-btn.Cancel{
+    border-color: rgb(179, 0, 0);
+    color: rgb(179, 0, 0);
+}
+
+.event-container .right .bottom-btn.Cancel:hover{
+    background-color: rgb(179, 0, 0);
+    color: white;
+}
+
+.event-container .right .bottom-btn:hover {
+    cursor: pointer;
+}

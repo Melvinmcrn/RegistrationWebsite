@@ -114,4 +114,5 @@
 .submit-btn-group input[type='submit']:hover, .submit-btn-group input[type='submit']:focus {
   background-color: rgb(0, 139, 30);
   color: white;
+  cursor: pointer;
 }

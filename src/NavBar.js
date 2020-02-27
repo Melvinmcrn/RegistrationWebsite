@@ -13,8 +13,12 @@ class NavBar extends React.Component {
         };
     }
 
+    login() {
+        this.setState({loggedin: true,});
+    }
+
     logout() {
-        this.setState({loggedin: false,})
+        this.setState({loggedin: false,});
     }
 
     render() {
@@ -40,7 +44,7 @@ class NavBar extends React.Component {
                             </a>
                             <div className="dropdown-content">
                                 <div className={this.state.loggedin ? 'hidden' : ''}>
-                                    <a href="/">Login</a>
+                                    <a href="/viewevent" onClick={this.login}>Login</a>
                                     <a href="/register">Register</a>
                                 </div>
 

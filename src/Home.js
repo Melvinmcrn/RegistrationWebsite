@@ -17,7 +17,7 @@ class Home extends React.Component {
                             Register Now
                         </a>
                     </a>
-                    <div className='txt-with-link'>already register? <a href='/'>login</a></div>
+                    <div className='txt-with-link'>already register? <a href='/viewevent'>login</a></div>
 
                 </div>
             </div>
