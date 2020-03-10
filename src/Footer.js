@@ -18,7 +18,6 @@ class Footer extends React.Component {
                 <div className='footer-bottom-text'>
                     <p>Copyright © 2020 Melvin Macaranas. All Rights Reserved.</p>
                 </div>
-                <p>HELLOOOOOOOOOOOOO</p>
             </footer>
 
         );
