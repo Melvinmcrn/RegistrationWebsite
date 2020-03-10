@@ -1,6 +1,6 @@
 import React from 'react';
 import './Register.css';
-import Navbar from './NavBar';
+// import Navbar from './NavBar';
 
 class Register extends React.Component {
 
@@ -11,23 +11,20 @@ class Register extends React.Component {
 
     render() {
         return (
-            <div>
-                <Navbar />
 
-                <div className='register-container'>
+            <div className='register-container'>
 
-                    <form className='register-form'>
+                <form className='register-form'>
 
-                        {loginInfo()}
-                        {personalInformation()}
-                        {education()}
+                    {loginInfo()}
+                    {personalInformation()}
+                    {education()}
 
-                        <div className='submit-btn-group'>
-                            <input type='submit'></input>
-                        </div>
+                    <div className='submit-btn-group'>
+                        <input type='submit'></input>
+                    </div>
 
-                    </form>
-                </div>
+                </form>
             </div>
         );
     }

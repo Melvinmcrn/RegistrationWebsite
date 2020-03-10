@@ -1,6 +1,6 @@
 import React from 'react';
 import './Home.css';
-import Navbar from './NavBar';
+// import Navbar from './NavBar';
 
 class Home extends React.Component {
 
@@ -14,8 +14,8 @@ class Home extends React.Component {
 
     render() {
         return (
-            <div>
-                <Navbar loggedin={this.state.loggedin} isstaff={this.state.isstaff} />
+            // <div>
+            //     <Navbar loggedin={this.state.loggedin} isstaff={this.state.isstaff} />
                 <div className='home-content'>
                     <div className='home-content-top'>
                         <a href='/register' className='btn-registernow'>
@@ -27,7 +27,7 @@ class Home extends React.Component {
 
                     </div>
                 </div>
-            </div>
+            // </div>
         );
     }
 }
