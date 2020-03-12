@@ -50,6 +50,15 @@
   background-color: whitesmoke;
   box-shadow: 0 4px 8px 0 rgba(207, 207, 207, 0.2), 0 6px 20px 0 rgba(207, 207, 207, 0.19);
   padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-container .card .card-topic {
+  font-size: 30px;
+  margin: 0px;
+  font-family: 'chulalongkornbold';
 }
 
 .btn-registernow {
@@ -86,6 +95,6 @@
 
 .home-content-top .txt-with-link {
   margin-top: 5px;
-  font-family: "chulalongkornreg";
-  font-size: 20px;
+  font-family: "chulalongkornbold";
+  /* font-size: 20px; */
 }
