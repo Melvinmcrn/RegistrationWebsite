@@ -6,7 +6,7 @@ import Footer from './Footer';
 import Home from './Home';
 import Register from './Register';
 import ViewEventClient from './ViewEventClient';
-import { Route, BrowserRouter as Router, Switch, Redirect } from 'react-router-dom';
+import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 import * as serviceWorker from './serviceWorker';
 
 class Main extends React.Component {

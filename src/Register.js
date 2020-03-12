@@ -6,7 +6,10 @@ class Register extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state = {};
+        this.state = {
+            userData: {},
+        };
+        this.handleTextChange = this.handleTextChange.bind(this);
     }
 
     render() {
@@ -16,9 +19,9 @@ class Register extends React.Component {
 
                 <form className='register-form'>
 
-                    {loginInfo()}
-                    {personalInformation()}
-                    {education()}
+                    {this.loginInfo()}
+                    {this.personalInformation()}
+                    {this.education()}
 
                     <div className='submit-btn-group'>
                         <input type='submit'></input>
@@ -28,92 +31,110 @@ class Register extends React.Component {
             </div>
         );
     }
-}
 
-function personalInformation() {
-    return (
-        <div className='form-container'>
+    handleTextChange(e) {
+        let tempData = this.state.userData;
+        tempData[e.target.name] = e.target.value;
+        this.setState({
+            userData: tempData,
+        });
+    }
 
-            <div className='form-topic'>
-                <h1>Personal Information</h1>
+    getInput(type, name, placeholder) {
+        return (
+            <input type={type} placeholder={placeholder} name={name} value={this.state.userData[name]} onChange={this.handleTextChange}></input>
+        );
+    }
+
+    personalInformation() {
+        return (
+            <div className='form-container'>
+
+                <div className='form-topic'>
+                    <h1>Personal Information</h1>
+                </div>
+
+                <div className='form-row'>
+                    <div className='form-content'>
+                        <label>First name</label>
+                        {this.getInput('text', 'fname', 'Wattana')}
+                    </div>
+
+                    <div className='form-content'>
+                        <label>Last name</label>
+                        {this.getInput('text', 'lname', 'Singhapanich')}
+                    </div>
+                </div>
+
+
+                <div className='form-row'>
+                    <div className='form-content'>
+                        <label>Nickname</label>
+                        {this.getInput('text', 'nickname', 'Wee')}
+                    </div>
+
+                    <div className='form-content'>
+                        <label>Birthday</label>
+                        {this.getInput('date', 'birthday', '')}
+                    </div>
+                </div>
+
             </div>
+        );
+    }
 
-            <div className='form-row'>
-                <div className='form-content'>
-                    <label>First name</label>
-                    <input type='text' placeholder='Melvin'></input>
+    loginInfo() {
+        return (
+            <div className='form-container'>
+
+                <div className='form-topic'>
+                    <h1>Account Information</h1>
                 </div>
 
                 <div className='form-content'>
-                    <label>Last name</label>
-                    <input type='text' placeholder='Macaranas'></input>
+                    <label>Email</label>
+                    {this.getInput('email', 'email', 'Wee1234@gmail.com')}
                 </div>
+
+                <div className='form-row'>
+                    <div className='form-content'>
+                        <label>Username</label>
+                        {this.getInput('text', 'username', 'Wee1234')}
+                    </div>
+
+                    <div className='form-content'>
+                        <label>Password</label>
+                        {this.getInput('password', 'password', '12345678')}
+                    </div>
+                </div>
+
+
+
             </div>
+        );
+    }
 
+    education() {
+        return (
+            <div className='form-container'>
 
-            <div className='form-row'>
+                <div className='form-topic'>
+                    <h1>Education</h1>
+                </div>
+
                 <div className='form-content'>
-                    <label>Nickname</label>
-                    <input type='text' placeholder='Mel'></input>
+                    <label>Education Level</label>
+                    {this.getInput('text', 'edulevel', 'High School')}
                 </div>
 
                 <div className='form-content'>
-                    <label>Birthday</label>
-                    <input type='date' ></input>
+                    <label>School/University</label>
+                    {this.getInput('text', 'schoolname', 'Triam Udom Suksa School')}
                 </div>
+
             </div>
-
-        </div>
-    );
-}
-
-function loginInfo() {
-    return (
-        <div className='form-container'>
-
-            <div className='form-topic'>
-                <h1>Account Information</h1>
-            </div>
-
-            <div className='form-content'>
-                <label>Username</label>
-                <input type='text'></input>
-            </div>
-
-            <div className='form-content'>
-                <label>Email</label>
-                <input type='email'></input>
-            </div>
-
-            <div className='form-content'>
-                <label>Password</label>
-                <input type='password'></input>
-            </div>
-
-        </div>
-    );
-}
-
-function education() {
-    return (
-        <div className='form-container'>
-
-            <div className='form-topic'>
-                <h1>Education</h1>
-            </div>
-
-            <div className='form-content'>
-                <label>Education Level</label>
-                <input type='text'></input>
-            </div>
-
-            <div className='form-content'>
-                <label>สถานศึกษา</label>
-                <input type='text'></input>
-            </div>
-
-        </div>
-    );
+        );
+    }
 }
 
 export default Register;
