@@ -22,16 +22,30 @@
   height: auto;
   overflow-y: auto;
   -ms-overflow-style: none;
-  background-image: url("./img/chula-bg.jpg");
+  /* background-image: url("./img/chula-bg.jpg"); */
   background-color: red;
-  display: block;
+  display: flex;
+  flex-wrap: wrap;
+
 }
 
 .vieweventclient-container::-webkit-scrollbar {
   display: none;
 }
 
+.event-card {
+  height: 230px;
+  width: 330px;
+  border-radius: 5px;
+  background-color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 10px;
+}
+
 .event-container {
+  /* padding: ; */
   margin: 10px auto 10px auto;
   width: 90%;
   height: 150px;

@@ -1,6 +1,6 @@
 import React from 'react';
 import './ViewEventClient.css';
-import {MdLocationOn, MdAccessTime} from 'react-icons/md';
+import { MdLocationOn, MdAccessTime } from 'react-icons/md';
 
 class ViewEventClient extends React.Component {
 
@@ -13,15 +13,33 @@ class ViewEventClient extends React.Component {
         return (
             <div className='vieweventclient-container'>
 
+                <div className='event-container'>
+                    {this.getEventCard()}
+                </div>
                 {/* Engineering Event */}
-                {generateEventContainer('Chula Engineering','engineer-event','Building 3','21-22 March 2020','Open','Register')}
+                {generateEventContainer('Chula Engineering', 'engineer-event', 'Building 3', '21-22 March 2020', 'Open', 'Register')}
 
                 {/* CBS Event */}
-                {generateEventContainer('CBS','cbs-event','Mahit Building','21-22 March 2020','Pending','Cancel')}
+                {generateEventContainer('CBS', 'cbs-event', 'Mahit Building', '21-22 March 2020', 'Pending', 'Cancel')}
 
                 {/* MDCU Event */}
-                {generateEventContainer('MDCU','mdcu-event','CP Building','21-22 March 2020','Registered','Cancel')}
-                
+                {generateEventContainer('MDCU', 'mdcu-event', 'CP Building', '21-22 March 2020', 'Registered', 'Cancel')}
+
+            </div>
+        );
+    }
+
+    getEventCard() {
+        return (
+            <div className='event-card'>
+                <div className='event-name'>
+
+                </div>
+                <div className='event-detail'>
+                    <h2><MdLocationOn className='icon' />{}</h2>
+                    <h2><MdAccessTime className='icon' />{}</h2>
+                </div>
+
             </div>
         );
     }
