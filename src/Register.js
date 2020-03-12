@@ -23,8 +23,8 @@ class Register extends React.Component {
                     {this.personalInformation()}
                     {this.education()}
 
-                    <div className='submit-btn-group'>
-                        <input type='submit'></input>
+                    <div className='btn-group'>
+                        <div className='btn-submit'>SUBMIT</div>
                     </div>
 
                 </form>
