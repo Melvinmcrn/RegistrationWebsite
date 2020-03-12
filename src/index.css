@@ -25,6 +25,9 @@ body {
   font-family: 'chulalongkornreg';
 
   background-image: url('./img/space-background.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 code {
