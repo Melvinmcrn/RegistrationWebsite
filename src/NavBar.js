@@ -11,13 +11,18 @@ class NavBar extends React.Component {
         this.state = {
             loggedin: false,
             isStaff: false,
+            showDropdown: false,
         };
+
+        this.showhideDropdown = this.showhideDropdown.bind(this);
     }
-    
-    componentWillMount() {
+
+    componentDidMount() {
         this.setState(
-            {loggedin: LocalStorageService.getAccessToken() ? true : false,
-            isStaff: LocalStorageService.isStaff() === 'true' ? true : false}
+            {
+                loggedin: LocalStorageService.getAccessToken() ? true : false,
+                isStaff: LocalStorageService.isStaff() === 'true' ? true : false
+            }
         );
     }
 
@@ -27,6 +32,12 @@ class NavBar extends React.Component {
 
     logout() {
         this.setState({ loggedin: false, });
+    }
+
+    showhideDropdown() {
+        this.setState({
+            showDropdown: !this.state.showDropdown
+        })
     }
 
     render() {
@@ -45,13 +56,13 @@ class NavBar extends React.Component {
                             </li>
                         </a>
                         <div></div>
-                        <li className="right">
+                        <li className="right" >
                             <div className="dropdown">
-                                <a href="/home" className="navbar-txt">
+                                <div className="navbar-txt" onClick={this.showhideDropdown}>
                                     <FaUserCircle className="navbar-icon-profile" />
                                     {/* Username */}
-                                </a>
-                                <div className="dropdown-content">
+                                </div>
+                                <div className={"dropdown-content " + (this.state.showDropdown ? 'show-dropdown' : '')}>
                                     <div className={this.state.loggedin ? 'hidden' : ''}>
                                         <a href="/viewevent" onClick={this.login}>Login</a>
                                         <a href="/register">Register</a>

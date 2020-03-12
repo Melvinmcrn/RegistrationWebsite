@@ -105,6 +105,13 @@ ul {
 li {
     float: left; 
 }
+
+li:hover {
+    color: #999999;
+    background-color: #3a3a3a;
+    cursor: pointer;
+}
+
 li a {
     display: block;
     text-align: center;
@@ -155,8 +162,8 @@ a:hover .big-txt{
 .dropdown-content a:hover {
     background-color: #3a3a3a;
 }
-  
-.dropdown:hover .dropdown-content {
+
+.dropdown-content.show-dropdown {
     display: block;
 }
 
