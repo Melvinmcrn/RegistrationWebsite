@@ -6,24 +6,44 @@ class ViewEventClient extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state = {};
+        this.state = {
+            showModal: false,
+        };
+
+        this.showHideModal = this.showHideModal.bind(this);
     }
 
     render() {
         return (
-            <div className='vieweventclient-container'>
+            <div className='vieweventclient-page'>
+
+                {this.getEventModal()}
+
+                <div className='page-topic'>
+                    My Event
+                </div>
 
                 <div className='event-container'>
                     {this.getEventCard()}
+                    {this.getEventCard()}
+                    {this.getEventCard()}
+                    {this.getEventCard()}
+                    {this.getEventCard()}
+                    {this.getEventCard()}
+                    {this.getEventCard()}
+                    {this.getEventCard()}
+                    {this.getEventCard()}
+                    {this.getEventCard()}
+                    {this.getEventCard()}
                 </div>
                 {/* Engineering Event */}
-                {generateEventContainer('Chula Engineering', 'engineer-event', 'Building 3', '21-22 March 2020', 'Open', 'Register')}
+                {/* {generateEventContainer('Chula Engineering', 'engineer-event', 'Building 3', '21-22 March 2020', 'Open', 'Register')} */}
 
                 {/* CBS Event */}
-                {generateEventContainer('CBS', 'cbs-event', 'Mahit Building', '21-22 March 2020', 'Pending', 'Cancel')}
+                {/* {generateEventContainer('CBS', 'cbs-event', 'Mahit Building', '21-22 March 2020', 'Pending', 'Cancel')} */}
 
                 {/* MDCU Event */}
-                {generateEventContainer('MDCU', 'mdcu-event', 'CP Building', '21-22 March 2020', 'Registered', 'Cancel')}
+                {/* {generateEventContainer('MDCU', 'mdcu-event', 'CP Building', '21-22 March 2020', 'Registered', 'Cancel')} */}
 
             </div>
         );
@@ -31,17 +51,49 @@ class ViewEventClient extends React.Component {
 
     getEventCard() {
         return (
-            <div className='event-card'>
+            <div className='event-card' onClick={this.showHideModal}>
                 <div className='event-name'>
-
+                    Intaniverse
                 </div>
                 <div className='event-detail'>
-                    <h2><MdLocationOn className='icon' />{}</h2>
-                    <h2><MdAccessTime className='icon' />{}</h2>
+                    <h2><MdLocationOn className='icon' />Faculty of Engineering</h2>
+                    <h2><MdAccessTime className='icon' />20 June 2019, 8.30PM</h2>
                 </div>
 
             </div>
         );
+    }
+
+    getEventModal() {
+        return (
+            <div className={'modal-container ' + (this.state.showModal ? 'show-modal' : '')}  onClick={this.showHideModal}>
+                <div className='event-modal'>
+                    HELLO<br />
+                HELLO<br />
+                HELLO<br />
+                HELLO<br />
+                HELLO<br />
+                HELLO<br />
+                HELLO<br />
+                HELLO<br />
+                HELLO<br />
+                HELLO<br />
+                HELLO<br />
+                HELLO<br />
+                HELLO<br />
+                HELLO<br />
+                HELLO<br />
+                HELLO<br />
+                HELLO<br />
+                </div>
+            </div>
+        );
+    }
+
+    showHideModal() {
+        this.setState({
+            showModal: !this.state.showModal,
+        })
     }
 }
 

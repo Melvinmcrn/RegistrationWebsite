@@ -17,19 +17,41 @@
 
 /* --------------------- main ------------------------- */
 
-.vieweventclient-container {
+.vieweventclient-page {
   width: 100%;
   height: auto;
   overflow-y: auto;
   -ms-overflow-style: none;
-  /* background-image: url("./img/chula-bg.jpg"); */
-  background-color: red;
   display: flex;
-  flex-wrap: wrap;
-
+  flex-direction: column;
+  align-items: center;
 }
 
-.vieweventclient-container::-webkit-scrollbar {
+.vieweventclient-page::-webkit-scrollbar {
+  display: none;
+}
+
+.vieweventclient-page .page-topic {
+  font-family: "chulalongkornbold";
+  font-size: 75px;
+  color: white;
+  text-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-top: 10px;
+}
+
+.event-container {
+  height: auto;
+  margin: 10px;
+  padding: 20px;
+  width: 80%;
+  border-radius: 5px;
+  background-color: rgb(245, 245, 245, 0.5);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.event-container::-webkit-scrollbar {
   display: none;
 }
 
@@ -40,26 +62,68 @@
   background-color: whitesmoke;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
+  margin: 10px;
   padding: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.event-container {
-  /* padding: ; */
-  margin: 10px auto 10px auto;
-  width: 90%;
-  height: 150px;
-  background-color: rgba(245, 245, 245, 0.8);
-  border: 5px solid;
-  border-radius: 10px;
-  overflow-y: auto;
-  -ms-overflow-style: none;
+.event-card:hover {
+  cursor: pointer;
 }
 
-.event-container::-webkit-scrollbar {
-  display: none;
+.event-card .event-name {
+  font-family: "chulalongkornbold";
+  font-size: 40px;
 }
 
+.event-card .event-detail {
+  font-family: "chulalongkornreg";
+  font-size: 16px;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding-left: 10px;
+}
+
+.modal-container {
+  z-index: 99;
+  /* display: none; */
+  display: block;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+
+  /* transition:transform 1s ease-out;
+  transform: scale(0); */
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.1s, opacity 0.1s ease-in-out;
+}
+
+.event-modal {
+  display: block;
+  position: fixed;
+  width: 50%;
+  height: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.show-modal {
+  display: block;
+  width: 100%;
+  height: 100%;
+  /* transform: scale(1); */
+  visibility: visible;
+  opacity: 1;
+}
+
+/* 
 .event-container.engineer-event {
   border-color: #8b2332;
   color: #8b2332;
@@ -83,7 +147,6 @@
 .event-container .right {
   float: right;
   height: 100%;
-  /* background-color: blue; */
   position: relative;
 }
 
@@ -124,7 +187,6 @@ h1.event-name {
 }
 
 .event-container .right .bottom-btn {
-    /* background-color: red; */
     height: 30px;
     width: 90px;
     border: 1px solid;
@@ -175,4 +237,4 @@ h1.event-name {
 
 .event-container .right .bottom-btn:hover {
     cursor: pointer;
-}
+} */
