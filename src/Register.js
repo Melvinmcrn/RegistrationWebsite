@@ -48,7 +48,7 @@ class Register extends React.Component {
 
     personalInformation() {
         return (
-            <div className='form-container'>
+            <div className='form-card'>
 
                 <div className='form-topic'>
                     <h1>Personal Information</h1>
@@ -85,7 +85,7 @@ class Register extends React.Component {
 
     loginInfo() {
         return (
-            <div className='form-container'>
+            <div className='form-card'>
 
                 <div className='form-topic'>
                     <h1>Account Information</h1>
@@ -116,7 +116,7 @@ class Register extends React.Component {
 
     education() {
         return (
-            <div className='form-container'>
+            <div className='form-card'>
 
                 <div className='form-topic'>
                     <h1>Education</h1>
