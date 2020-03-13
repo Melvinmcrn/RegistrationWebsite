@@ -31,6 +31,11 @@
   display: none;
 }
 
+.icon {
+  font-size: 30px;
+  margin-bottom: -5px;
+}
+
 .vieweventclient-page .page-topic {
   font-family: "chulalongkornbold";
   font-size: 75px;
@@ -68,16 +73,12 @@
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.event-card:hover {
-  cursor: pointer;
-}
-
-.event-card .event-name {
+.event-name {
   font-family: "chulalongkornbold";
   font-size: 40px;
 }
 
-.event-card .event-detail {
+.event-detail {
   font-family: "chulalongkornreg";
   font-size: 16px;
   background-color: rgba(0, 0, 0, 0.1);
@@ -87,154 +88,32 @@
 
 .modal-container {
   z-index: 99;
-  /* display: none; */
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: fixed;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.8);
-
-  /* transition:transform 1s ease-out;
-  transform: scale(0); */
   visibility: hidden;
   opacity: 0;
   transition: visibility 0.1s, opacity 0.1s ease-in-out;
 }
 
 .event-modal {
-  display: block;
-  position: fixed;
   width: 50%;
   height: auto;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   background-color: white;
   border-radius: 5px;
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 .show-modal {
-  display: block;
   width: 100%;
   height: 100%;
-  /* transform: scale(1); */
   visibility: visible;
   opacity: 1;
 }
-
-/* 
-.event-container.engineer-event {
-  border-color: #8b2332;
-  color: #8b2332;
-}
-
-.event-container.cbs-event {
-  border-color: #00a1df;
-  color: #00a1df;
-}
-
-.event-container.mdcu-event {
-  border-color: #026937;
-  color: #026937;
-}
-
-.event-container .left {
-  float: left;
-  margin-left: 10px;
-}
-
-.event-container .right {
-  float: right;
-  height: 100%;
-  position: relative;
-}
-
-.event-container .event-name {
-  font-family: "chulalongkornbold";
-  font-size: 50px;
-  margin-top: 0px;
-  margin-left: 0px;
-}
-
-h1.event-name {
-  margin: 0px 0px 0px 0px;
-}
-
-.event-container .event-detail {
-  color: rgb(95, 95, 95);
-  font-family: "chulalongkornreg";
-  font-size: 16px;
-  margin-top: 0px;
-  margin-bottom: 0px;
-}
-
-.event-detail h2 {
-  margin: 0px 0px 0px 0px;
-}
-
-.event-container h2 .icon {
-  height: 16px;
-}
-
-.event-container .right .top-status {
-    font-family: 'chulalongkornreg';
-    font-size: 20px;
-    position: absolute;
-    top: 0px;
-    right: 5px;
-    margin-top: 0px;
-}
-
-.event-container .right .bottom-btn {
-    height: 30px;
-    width: 90px;
-    border: 1px solid;
-    border-radius: 5px;
-    bottom: 5px;
-    right: 5px;
-    position: absolute;
-    text-align: center;
-    font-family: 'chulalongkornbold';
-    font-size: 16px;
-}
-
-.event-container .right .top-status.Open {
-    color: black;
-}
-
-.event-container .right .top-status.Registered {
-    color: rgb(33, 196, 0);
-}
-
-.event-container .right .top-status.Pending {
-    color: rgb(230, 207, 3);
-}
-
-.event-container .right .top-status.Rejected {
-    color: rgb(179, 0, 0);
-}
-
-.event-container .right .bottom-btn.Register{
-    border-color: rgb(33, 196, 0);
-    color: rgb(33, 196, 0);
-}
-
-.event-container .right .bottom-btn.Register:hover{
-    background-color: rgb(33, 196, 0);
-    color: white;
-}
-
-.event-container .right .bottom-btn.Cancel{
-    border-color: rgb(179, 0, 0);
-    color: rgb(179, 0, 0);
-}
-
-.event-container .right .bottom-btn.Cancel:hover{
-    background-color: rgb(179, 0, 0);
-    color: white;
-}
-
-.event-container .right .bottom-btn:hover {
-    cursor: pointer;
-} */
