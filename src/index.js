@@ -1,13 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
+import * as serviceWorker from './serviceWorker';
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+
 import './index.css';
 import NavBar from './NavBar';
 import Footer from './Footer';
 import Home from './Home';
 import Register from './Register';
 import ViewEventClient from './ViewEventClient';
-import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
-import * as serviceWorker from './serviceWorker';
+import reducers from './redux/reducer/reducer';
 
 class Main extends React.Component {
 
@@ -18,7 +22,7 @@ class Main extends React.Component {
 
     render() {
         return (
-            <div>
+            <Provider store={createStore(reducers)}>
                 <NavBar />
 
                 <Router>
@@ -37,7 +41,7 @@ class Main extends React.Component {
                 </Router>
 
                 <Footer />
-            </div>
+            </Provider>
         );
     }
 }
