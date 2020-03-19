@@ -1,11 +1,13 @@
 import React from 'react';
+import { connect } from 'react-redux';
+
 import './Home.css';
-// import Navbar from './NavBar';
 
 class Home extends React.Component {
 
     constructor(props) {
         super(props);
+        console.log(this.props);
         this.state = {
             loggedin: false,
             isstaff: false,
@@ -46,4 +48,10 @@ class Home extends React.Component {
     }
 }
 
-export default Home;
+const mapStateToProps = (state) => {
+    return {
+        tempReducer: state.tempReducer
+    };
+};
+
+export default connect(mapStateToProps)(Home);
