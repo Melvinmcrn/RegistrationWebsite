@@ -1,5 +1,5 @@
 import React from 'react';
-import './Register.css';
+// import './Register.css';
 // import Navbar from './NavBar';
 
 class Register extends React.Component {

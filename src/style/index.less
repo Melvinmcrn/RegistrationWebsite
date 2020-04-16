@@ -1,0 +1,142 @@
+/* ------------------- fonts ----------------------- */
+@font-face {
+  font-family: "chulalongkornbold";
+  src: url("../fonts/chulalongkornbold-webfont.woff2") format("woff2"),
+    url("../fonts/chulalongkornbold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "chulalongkornreg";
+  src: url("../fonts/chulalongkornreg-webfont.woff2") format("woff2"),
+    url("../fonts/chulalongkornreg-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@chulalongkornbold: "chulalongkornbold";
+@chulalongkornreg: "chulalongkornreg";
+
+/* --------------------- main ------------------------- */
+
+@space-bg: url("../img/space-background.jpg");
+
+.container {
+  width: 100%;
+  height: auto;
+  overflow-y: auto;
+  -ms-overflow-style: none;
+  background-image: @space-bg;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.register-container {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0px 10px 0px;
+
+  .container;
+}
+
+.register-container::-webkit-scrollbar {
+  display: none;
+}
+
+.register-form {
+  padding: 20px;
+  width: 60%;
+  background-color: fade(rgb(255, 255, 255),50%);
+  border-radius: 5px;
+
+  .form-card {
+    border-radius: 5px;
+    height: auto;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    padding: 10px 30px 30px 30px;
+    position: relative;
+    display: block;
+    background-color: rgba(245, 245, 245, 0.9);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+    .form-content {
+      font-family: @chulalongkornreg;
+      font-size: 20px;
+      margin: 10px;
+
+      label {
+        margin: 0px 0px 0px 0px;
+      }
+
+      input {
+        width: 100%;
+        margin-top: -50px;
+        font-family: @chulalongkornreg;
+        font-size: 20px;
+        border-radius: 10px;
+        border: 2px solid #ccc;
+        padding-left: 5px;
+        padding-right: 5px;
+        transition: border-color 0.05s ease-in-out 0.1s;
+      }
+
+      input:focus {
+        border-width: 2px;
+        border-color: rgb(138, 193, 255);
+        outline-style: none;
+      }
+    }
+  }
+}
+
+.form-topic h1 {
+  font-family: @chulalongkornbold;
+  font-size: 50px;
+  position: relative;
+  margin-top: 0px;
+  margin-left: 0px;
+  margin-bottom: 10px;
+}
+
+.btn-group {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+
+  .btn-submit {
+    width: 100px;
+    height: 50px;
+    text-align: center;
+    border-radius: 5px;
+    font-family: "chulalongkornbold";
+    color: white;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(0, 139, 30);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+    transition: color 0.1s ease-in-out 0.1s;
+    transition: background-color 0.1s ease-in-out 0.1s;
+  }
+
+  .btn-submit:hover {
+    color: rgb(0, 139, 30);
+    background-color: white;
+    cursor: pointer;
+  }
+}
+
+.form-row {
+  display: flex;
+  .form-content {
+    flex: 1 1 0px;
+  }
+}

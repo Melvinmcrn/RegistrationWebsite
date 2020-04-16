@@ -22,7 +22,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "less": "less-watch-compiler --enable-js ./src/style ./src/assets index.less"
+    "less": "less-watch-compiler --enable-js ./src/style ./src/style index.less"
   },
   "eslintConfig": {
     "extends": "react-app"
